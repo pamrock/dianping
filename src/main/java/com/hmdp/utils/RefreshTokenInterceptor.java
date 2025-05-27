@@ -31,8 +31,15 @@ public class RefreshTokenInterceptor implements HandlerInterceptor {
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //获取请求头中的token
         String token = request.getHeader("authorization");
+        String prefix = "Bearer ";
+        log.info("token:{}", token);
+
+
         if (StrUtil.isBlank(token)) {
             return true;
+        }
+        if (token.startsWith(prefix)) {
+            token = token.substring(prefix.length());
         }
 
         //基于token获取redis中的用户

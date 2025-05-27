@@ -81,6 +81,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
         //一致，根据手机号查询用户
         User user = query().eq("phone", phone).one();
+        
 
         //判断用户是否存在
         if(user == null){
