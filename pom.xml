@@ -60,6 +60,11 @@
         <groupId>org.aspectj</groupId>
         <artifactId>aspectjweaver</artifactId>
     </dependency>
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-transport-native-unix-common</artifactId>
+            <version>4.1.108.Final</version> <!-- 请根据实际情况调整版本 -->
+        </dependency>
         <!--hutool-->
         <dependency>
             <groupId>cn.hutool</groupId>
@@ -71,6 +76,12 @@
             <artifactId>testng</artifactId>
             <version>RELEASE</version>
             <scope>test</scope>
+        </dependency>
+        <!--redisson-->
+        <dependency>
+            <groupId>org.redisson</groupId>
+            <artifactId>redisson</artifactId>
+            <version>3.46.0</version>
         </dependency>
 
     </dependencies>
